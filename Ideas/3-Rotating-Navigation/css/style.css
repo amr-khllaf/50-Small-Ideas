@@ -1,0 +1,224 @@
+/** Start Font Classes */
+.agu-font {
+  font-family: "Agu Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "MORF" 0;
+}
+/** End Font Classes */
+
+/** Start Global Classes */
+* {
+  box-sizing: border-box;
+}
+.text-select::selection {
+  background-color: #ff7979;
+}
+/** End Global Classes */
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: #333;
+  color: #222;
+}
+
+.container {
+  background-color: #fafafa;
+  width: 100vw;
+  height: 120vh;
+  padding: 50px;
+  transform-origin: top left;
+  transition: transform 1s linear;
+  -webkit-transition: transform 1s linear;
+  -moz-transition: transform 1s linear;
+  -ms-transition: transform 1s linear;
+  -o-transition: transform 1s linear;
+}
+.container.show-nav {
+  transform: rotate(-20deg);
+  -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+}
+
+/** Start Circle Classes */
+/*& I give left and -100px and in circle give width and hight 200 px to show the half of the circle  */
+.container .circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+.container .circle-container .circle {
+  background-color: #ff7979;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  /*&i give a position to relative to be free to move the buttons in circle*/
+  position: relative;
+  transition: transform 1s linear;
+  -webkit-transition: transform 1s linear;
+  -moz-transition: transform 1s linear;
+  -ms-transition: transform 1s linear;
+  -o-transition: transform 1s linear;
+}
+.container.show-nav .circle {
+  transform: rotate(-70deg);
+  -webkit-transform: rotate(-70deg);
+  -moz-transform: rotate(-70deg);
+  -ms-transform: rotate(-70deg);
+  -o-transform: rotate(-70deg);
+}
+.container .circle-container .circle button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  background-color: transparent;
+  border: 0;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+  transition: color 0.5s;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -ms-transition: color 0.5s;
+  -o-transition: color 0.5s;
+}
+.container .circle-container .circle button:hover {
+  color: black;
+}
+
+.container .circle-container .circle button#open {
+  /*& these Directions of the buttons are relative to the circle */
+  left: 60%;
+}
+.container .circle-container .circle button#close {
+  top: 60%;
+  transform-origin: top left;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+}
+
+/** End Circle Classes */
+
+/*! Start Navbar Classes */
+
+.container.show-nav + nav li {
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transition: transform 1s linear;
+  -webkit-transition: transform 1s linear;
+  -moz-transition: transform 1s linear;
+  -ms-transition: transform 1s linear;
+  -o-transition: transform 1s linear;
+  transition-delay: 0.5s;
+}
+
+nav {
+  position: fixed;
+  bottom: 50px;
+  left: 0px;
+  z-index: 100;
+}
+nav ul {
+  list-style: none;
+  padding: 30px;
+}
+nav ul li {
+  text-transform: uppercase;
+  color: white;
+  margin: 25px 0;
+  cursor: pointer;
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+}
+
+nav ul li + li {
+  margin-left: 15px;
+  transform: translateX(-150%);
+  -webkit-transform: translateX(-150%);
+  -moz-transform: translateX(-150%);
+  -ms-transform: translateX(-150%);
+  -o-transform: translateX(-150%);
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+}
+
+nav ul li + li + li {
+  margin-left: 30px;
+  transform: translateX(-200%);
+  -webkit-transform: translateX(-200%);
+  -moz-transform: translateX(-200%);
+  -ms-transform: translateX(-200%);
+  -o-transform: translateX(-200%);
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+}
+nav ul li:hover {
+  color: #ff7979;
+}
+nav ul li i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+/*! End NavBar Classes */
+
+/** Start Content Classes */
+
+.container .content {
+  /* background-color: aqua; */
+  /* max-width: 1000px; */
+  width: 60%;
+  margin: 50px auto;
+}
+.container .content .img-container {
+  text-align: center;
+  /* width: 90%; */
+}
+.container .content img {
+  max-width: 100%;
+
+  text-align: center;
+  background-color: black;
+}
+.container .content h1 {
+  margin: 0;
+}
+.container .content small {
+  color: #555;
+  font-style: italic;
+}
+.container .content p {
+  color: #555;
+  line-height: 1.5;
+  /* word-wrap: break-word; */
+}
+
+/** End Content Classes */
