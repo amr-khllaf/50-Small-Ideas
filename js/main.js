@@ -16,8 +16,7 @@ right.addEventListener("mouseleave", () =>
   container.classList.remove("hover-right")
 );
 
-h1 = document.getElementById("h1");
-setTimeout(() => {
-  h1.style.transition = "all 1s ease";
-  h1.style.display = "none";
-}, 500);
+// h1 = document.getElementById("h1");
+// setTimeout(() => {
+//   h1.style.display = "none";
+// }, 500);
