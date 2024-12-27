@@ -1,0 +1,202 @@
+/*& I will Try to use the Vars and to Use the rem in this Page */
+
+/* ! Start Global Classes */
+* {
+  box-sizing: border-box;
+}
+:root {
+  --left-bg-color: rgba(110, 117, 127, 0.3);
+  --right-bg-color: rgba(87, 84, 236, 0.3);
+  --h2-bg-color: #fff;
+  --h2-color-hover: rgb(255, 121, 121);
+  --hover-width: 70%;
+  --other-width: 30%;
+  --speed: 1000ms;
+}
+body {
+  height: 100vh;
+  overflow-x: hidden;
+  margin: 0;
+  /* background-color: aqua; */
+  background-color: #333;
+}
+a {
+  color: inherit;
+}
+
+.btn-hover {
+  font-size: 3rem;
+  width: 35%;
+  margin: 40px 0px;
+  color: var(--h2-color-hover);
+  border: solid black 2px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  background-color: var(--h2-bg-color);
+}
+
+.links {
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+.btn {
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* ! End Global Classes */
+.container {
+  position: relative;
+  width: 100%;
+  height: 120vh;
+  transition: all 2s ease-out;
+  -webkit-transition: all 2s ease-out;
+  -moz-transition: all 2s ease-out;
+  -ms-transition: all 2s ease-out;
+  -o-transition: all 2s ease-out;
+}
+h1 {
+  font-size: 3rem;
+  color: #fff;
+  /*position: absolute;
+  top: 10px;
+  left: 50%;
+  */
+  text-align: center;
+  white-space: nowrap;
+  /*display: none;
+  */
+  transition: all 1s ease-out;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -ms-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+}
+h2 {
+  white-space: nowrap;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: inherit;
+  text-align: center;
+  font-size: 2rem;
+  /*border: 2px solid white;
+  */
+  width: 25%;
+  padding: 10px;
+  margin-bottom: 20px;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+}
+h2:hover {
+  font-size: 3rem;
+  width: 35%;
+  margin: 40px 0px;
+  color: var(--h2-color-hover);
+  border: solid black 2px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  background-color: var(--h2-bg-color);
+}
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+.split.left {
+  left: 0;
+  background-image: url("../imgs/1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* & I will use this way to make an overlay on each side by using sudo element like before:: */
+.split.left::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--left-bg-color);
+}
+
+.split.right {
+  right: 0;
+  background-image: url("../imgs/2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.split.right::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--right-bg-color);
+}
+.hover-left .left {
+  width: var(--hover-width);
+}
+.hover-left .right {
+  width: var(--other-width);
+}
+.hover-right .right {
+  width: var(--hover-width);
+}
+.hover-right .left {
+  width: var(--other-width);
+}
+.split.right,
+.split.left,
+.split.left::before,
+.split.right::before {
+  transition: all var(--speed) ease-in-out;
+  -webkit-transition: all var(--speed) ease-in-out;
+  -moz-transition: all var(--speed) ease-in-out;
+  -ms-transition: all var(--speed) ease-in-out;
+  -o-transition: all var(--speed) ease-in-out;
+}
+
+a {
+  transition: all 0.6s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  -ms-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  white-space: nowrap;
+}
+a:hover {
+  font-size: 1.5rem;
+  margin: 20px 0px;
+  color: var(--h2-color-hover);
+  border: solid black 2px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  background-color: var(--h2-bg-color);
+}

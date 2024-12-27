@@ -1,0 +1,29 @@
+@media (max-width: 800px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h2:hover {
+    font-size: 1.5rem;
+  }
+  .btn {
+    font-size: 1rem;
+  }
+  a:hover {
+    font-size: 1rem;
+  }
+  .hover-left .left {
+    width: var(65%);
+  }
+  .hover-left .right {
+    width: var(35%);
+  }
+  .hover-right .right {
+    width: var(65%);
+  }
+  .hover-right .left {
+    width: var(65%);
+  }
+}
